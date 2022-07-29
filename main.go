@@ -10,6 +10,7 @@ import (
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", HomeHandler)
+	r.HandleFunc("/post", PostHandler)
 
 	http.ListenAndServe(":8080", r)
 }
